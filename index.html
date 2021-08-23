@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>united</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css'>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+  <body ng-app="ModuleA">
+
+    <div ng-controller="UserController">
+      {{User}}
+    </div>
+    <hr class="style11">
+    <div ng-controller="MsgController">
+      <h1>united</h1>
+
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" id="txtNewMsg" placeholder="Message"></input>
+        <div class="input-group-append">
+          <button class="btn btn-outline" ng-click="newMsg()"><i class="far fa-plus-square"></i> New Message</button>
+        </div>
+      </div>
+      <br/>
+      <ul class="list-group">
+        <li ng-repeat="message in response.msgList track by $index" class="list-group-item animated fadeIn">
+          <button class="pull-left btn btn-link">{{ message }} </button>
+          <button class="pull-right btn btn-link" ng-click="deleteMsg($index)"><i class="fas fa-times"></i></button>
+    </div>
+    </li>
+    </ul>
+
+    <hr class="style11">
+    </div>
+  </body>
+  <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/angular-cookie/4.1.0/angular-cookie.min.js'></script>
+  <script src="./script.js"></script>
+
+</body>
+
+</html>
